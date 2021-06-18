@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/images/telegram-logo.png" sizes="32x32" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Telegram Text Formatter</title>
+</head>
+<body>
+    <div class="stage">
+        <div class="titlebar">
+            <img class="telegram-logo" src="/assets/images/telegram-logo.png" alt="Telegram Logo">
+            <div class="title">
+                <span class="titleName">Telegram Text Formatter</span>
+                <span class="titleStatus">online</span>
+            </div>
+        </div>
+        <div class="preview">
+            <div class="text-message" >
+                <span class="message" id="textMessage"><span class="silver">Type you message down below for it to appear here!</span></span>
+                <span class="time-tag" id="timeElem">23:46</span>
+                <span class="material-icons done-icon">done</span>
+                <span class="material-icons done-icon">done</span>
+            </div>
+        </div>
+        <div class="sendbox">
+            <textarea id="messageBox" oninput="updateTextMessage()" type="text" class="message-box" placeholder="Message"></textarea>
+        </div>
+    </div>
+</body>
+</html>
+
