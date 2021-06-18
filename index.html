@@ -1,39 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="icon" href="./assets/images/telegram-logo.png" sizes="32x32" type="image/png">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="icon"
+      href="./assets/images/telegram-logo.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/javascript/app.js" defer></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Telegram Text Formatter</title>
-</head>
-<body>
-    <div class="stage">
-        <div class="titlebar">
-            <img class="telegram-logo" src="/assets/images/telegram-logo.png" alt="Telegram Logo">
-            <div class="title">
-                <span class="titleName">Telegram Text Formatter</span>
-                <span class="titleStatus">online</span>
-            </div>
+  </head>
+  <body>
+    <div class="editor-tab">
+      <div class="editor-edge"></div>
+      <div class="editor">
+        <div class="edit-btn" id="copyContent">
+          <i class="material-icons">content_copy</i>
         </div>
-        <div class="preview">
-            <div class="text-message" >
-                <span class="message" id="textMessage"><span class="silver">Type you message down below for it to appear here!</span></span>
-                <span class="time-tag" id="timeElem">23:46</span>
-                <span class="material-icons done-icon">done</span>
-                <span class="material-icons done-icon">done</span>
-            </div>
+        <div
+          class="edit-btn"
+          id="boldText"
+          onclick="editText('**')"
+          data-text="Bold Text"
+        >
+          <i class="material-icons">format_bold</i>
         </div>
-        <div class="sendbox">
-            <textarea id="messageBox" oninput="updateTextMessage()" type="text" class="message-box" placeholder="Message"></textarea>
+        <div
+          class="edit-btn"
+          id="italicText"
+          onclick="editText('__')"
+          data-text="Italic Text"
+        >
+          <i class="material-icons">format_italic</i>
         </div>
+        <div
+          class="edit-btn"
+          id="strikeText"
+          onclick="editText('~~')"
+          data-text="Strike Text"
+        >
+          <i class="material-icons">format_strikethrough</i>
+        </div>
+        <div
+          class="edit-btn"
+          id="monoText"
+          onclick="editText('`')"
+          data-text="Monospace"
+        >
+          <p>M</p>
+        </div>
+      </div>
+      <div class="editor-edge"></div>
     </div>
-</body>
+    <div class="stage">
+      <div class="titlebar">
+        <img
+          class="telegram-logo"
+          src="/assets/images/telegram-logo.png"
+          alt="Telegram Logo"
+        />
+        <div class="title">
+          <span class="titleName">Telegram Text Formatter</span>
+          <span class="titleStatus">online</span>
+        </div>
+      </div>
+      <div class="preview">
+        <div class="text-message">
+          <span class="message" id="textMessage"
+            ><span class="silver"
+              >Type your message down below for it to appear here!</span
+            ></span
+          >
+          <span class="time-tag" id="timeElem">23:46</span>
+          <span class="material-icons done-icon">done</span>
+          <span class="material-icons done-icon">done</span>
+        </div>
+      </div>
+      <div class="sendbox">
+        <textarea
+          id="messageBox"
+          oninput="updateTextMessage()"
+          type="text"
+          class="message-box"
+          placeholder="Message"
+        ></textarea>
+      </div>
+    </div>
+    <section id="about" class="aboutpage">
+      <span class="infoTitle mainInfo"
+        >Website built by
+        <a href="http://github.com/Hasala2002">Hasala Heiyanthuduwa</a></span
+      >
+      <span class="profilePic">
+        <img class="dp" src="/assets/images/hasala.jpeg" alt="logo" />
+      </span>
+      <span class="infoTitle"
+        ><span class="green">Telegram Text Formatter</span></span
+      >
+    </section>
+  </body>
 </html>
-
